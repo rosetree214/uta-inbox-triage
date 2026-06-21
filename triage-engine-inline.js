@@ -106,7 +106,7 @@
       var rec = store.get(id);
       if (rec) { var o = { id: id, do: rec.do }; if (rec.note) o.note = rec.note; actions.push(o); }
     });
-    return { v: 1, session: new Date().toISOString(), actions: actions };
+    return { v: 1, triage: (window.__TRIAGE_ID__ || ""), session: new Date().toISOString(), actions: actions };
   }
 
   function byteLen(s) { return new TextEncoder().encode(s).length; }
