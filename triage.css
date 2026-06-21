@@ -1,5 +1,7 @@
 :root{
-  --bg:var(--tg-theme-bg-color,#f5f5f3); --ink:var(--tg-theme-text-color,#0f0f0f); --muted:var(--tg-theme-hint-color,#6b6969);
+  /* Fixed UTA light palette — the cards are always white, so do NOT inherit the
+     Telegram theme (dark mode would make on-card text white-on-white = invisible). */
+  --bg:#f5f5f3; --ink:#0f0f0f; --muted:#6b6969;
   --line:#d9d7d2; --card:#ffffff; --needs:#0f0f0f; --know:#6b6969; --noise:#aba29c;
   --c-note:#5b4cf0; --c-todoist:#b11e2f; --c-archive:#6b7280; --c-skip:#9a7b2f; --c-ignore:#aba29c;
   --radius:18px; --shadow:0 10px 30px rgba(15,15,15,.08);
@@ -7,7 +9,7 @@
   --mono:"SFMono-Regular","IBM Plex Mono",Consolas,Menlo,monospace; --tap:44px;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
-html{background:var(--bg);} body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;padding-bottom:calc(92px + env(safe-area-inset-bottom));}
+html{background:var(--bg);color-scheme:light;} body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;padding-bottom:calc(92px + env(safe-area-inset-bottom));}
 .phone-shell{width:100%;max-width:520px;margin:0 auto;padding:env(safe-area-inset-top) 14px 0;}
 header{margin:0 -14px 14px;padding:16px 14px 12px;background:var(--bg);border-bottom:1px solid var(--line);}
 .kicker{display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
